@@ -34,6 +34,6 @@ setup(
     name="keys",
     packages=["keys"],
     platforms=["Linux"],
-    version="0.1a2",
+    version="0.1a3",
     zip_safe=True
 )
