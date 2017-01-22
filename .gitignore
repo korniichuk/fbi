@@ -1,0 +1,9 @@
+*~
+*.gz
+*.pyc
+*.tar
+*.tgz
+*.zip
+.pypirc
+/*.egg-info/*
+/dist/*

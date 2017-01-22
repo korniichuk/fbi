@@ -1,0 +1,52 @@
+_ask_init_keys_utility
+The keys utility not inited. Init the keys utility and continue? [y/n]
+_ask_passwd
+Enter password:
+_ask_remove_dir
+'%s' is a directory. Remove directory and continue? [y/n]
+_ask_remove_keys_location
+Keys location is not a directory. Remove '%s' file and continue? [y/n]
+_ask_remove_cipher_location
+File location is not a directory. Remove '%s' file and continue? [y/n]
+_ask_replace_file
+'%s' file already exists. Replace file and continue? [y/n]
+_critical_NoRoot
+Critical: To do that you need a superuser (root) privileges.
+_critical_Oops
+Critical: %s.
+_decoded
+Decoded password from '%s' file and with '%s' private key.
+_encoded
+Encoded password to '%s' file and with '%s' public key.
+_error_CreatePrivateKey
+Error: Initialization failed. '%s' private key was not created. %s.
+_error_CreatePublicKey
+Error: Initialization failed. '%s' public key, base on '%s' private key, was not created. %s.
+_error_DecodeError
+Error: Decryption failed for '%s' file with encoded password and '%s' private key.
+_error_EncodeFileExistsError
+Error: Encryption failed. '%s' file already exists.
+_error_EncodeIsADirectoryError
+Error: Encryption failed. '%s' is a directory.
+_error_EncodeKeysUtilityNotInited
+Error: Encryption failed. The keys utility not inited.
+_error_EncodeNotADirectoryError
+Error: Encryption failed. '%s' file location is not a directory.
+_error_InitFileExistsError
+Error: Initialization failed. '%s' file already exists.
+_error_InitIsADirectoryError
+Error: Initialization failed. '%s' is a directory.
+_error_InitializationNotADirectoryError
+Error: Initialization failed. '%s' keys location is not a directory.
+_error_NoCipher
+Error: No '%s' file with encoded password.
+_error_NoPrivateKey
+Error: No '%s' private key.
+_inited
+Successfully inited the keys utility.
+_passwd
+Password: %s
+_removed_dir
+Successfully removed '%s' directory.
+_removed_file
+Successfully removed '%s' file.
