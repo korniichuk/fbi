@@ -146,9 +146,8 @@ Get password from an encoded file
 ---------------------------------
 ::
 
-    from keys import getpassword
-
-    getpassword(path)
+    >>> from keys import getpassword
+    >>> getpassword(path)
 
 Where:
 
@@ -156,16 +155,12 @@ Where:
 
 Example::
 
-    from keys import getpassword
-
-    path = "/home/titan/.key/netezza.enc"
-
-    passwd = getpassword(path)
+    >>> from keys import getpassword
+    >>> path = "/home/titan/.key/netezza.enc"
+    >>> passwd = getpassword(path)
 
 or::
 
-    from keys import getpassword
-
-    path = "~/.key/netezza.enc"
-
-    passwd = getpassword(path)
+    >>> from keys import getpassword
+    >>> path = "~/.key/netezza.enc"
+    >>> passwd = getpassword(path)
