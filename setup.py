@@ -24,16 +24,19 @@ setup(
         "Topic :: Utilities"
     ],
     description="The keys utility",
+    download_url="https://github.com/korniichuk/keys/archive/0.1.zip",
     entry_points={"console_scripts":"keys=keys.keys:main"},
     include_package_data=True,
     install_requires=[
         "rsa"
     ],
     keywords=["cryptography", "keys", "python", "python2"],
+    license="Public Domain",
     long_description=open(join(dirname(__file__), "README.rst")).read(),
     name="keys",
     packages=["keys"],
     platforms=["Linux"],
+    url="https://github.com/korniichuk/keys/",
     version="0.1a3",
     zip_safe=True
 )
