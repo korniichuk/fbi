@@ -37,6 +37,6 @@ setup(
     packages=["keys"],
     platforms=["Linux"],
     url="https://github.com/korniichuk/keys/",
-    version="0.1a3",
+    version="0.1a4",
     zip_safe=True
 )
