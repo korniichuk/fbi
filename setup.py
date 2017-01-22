@@ -37,6 +37,6 @@ setup(
     packages=["fbi"],
     platforms=["Linux"],
     url="https://github.com/korniichuk/fbi/",
-    version="0.1a4",
+    version="0.1a5",
     zip_safe=True
 )

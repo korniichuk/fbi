@@ -3,7 +3,7 @@
 import settings
 from client import *
 
-__version__ = "0.1a4"
+__version__ = "0.1a5"
 
 # Inint vars
 settings.init()
