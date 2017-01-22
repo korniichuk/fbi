@@ -1,5 +1,9 @@
 .. contents:: Table of contents
 
+Introduction
+============
+The passwords encryption utility. Do not save your passwords as plaintext!
+
 Installation
 ============
 Install the fbi utility from PyPI

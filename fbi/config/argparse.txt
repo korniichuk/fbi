@@ -1,5 +1,5 @@
 _parser
-The fbi utility
+The password encryption utility
 _subparsers
 subcommands
 _parser_decode

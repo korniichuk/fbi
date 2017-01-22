@@ -23,7 +23,7 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Utilities"
     ],
-    description="The fbi utility",
+    description="The password encryption utility",
     download_url="https://github.com/korniichuk/fbi/archive/0.1.zip",
     entry_points={"console_scripts":"fbi=fbi.fbi:main"},
     include_package_data=True,
