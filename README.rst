@@ -8,7 +8,7 @@ Install the keys utility from PyPI
 
     $ sudo pip install keys
 
-Install the keys utility from GitLab
+Install the keys utility from GitHub
 ------------------------------------
 ::
 
