@@ -16,10 +16,10 @@ def live():
     """Upload package to PyPI Live"""
 
     local("python setup.py register -r pypi")
-    local("python setup.py sdist --format=zip,gztar upload -r pypi")
+    local("python setup.py sdist --format=gztar upload -r pypi")
 
 def test():
     """Upload package to PyPI Test"""
 
     local("python setup.py register -r pypitest")
-    local("python setup.py sdist --format=zip,gztar upload -r pypitest")
+    local("python setup.py sdist --format=gztar upload -r pypitest")
