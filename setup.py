@@ -23,20 +23,20 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Utilities"
     ],
-    description="The keys utility",
-    download_url="https://github.com/korniichuk/keys/archive/0.1.zip",
-    entry_points={"console_scripts":"keys=keys.keys:main"},
+    description="The fbi utility",
+    download_url="https://github.com/korniichuk/fbi/archive/0.1.zip",
+    entry_points={"console_scripts":"fbi=fbi.fbi:main"},
     include_package_data=True,
     install_requires=[
         "rsa"
     ],
-    keywords=["cryptography", "keys", "python", "python2"],
+    keywords=["cryptography", "fbi", "key", "python", "python2"],
     license="Public Domain",
     long_description=open(join(dirname(__file__), "README.rst")).read(),
-    name="keys",
-    packages=["keys"],
+    name="fbi",
+    packages=["fbi"],
     platforms=["Linux"],
-    url="https://github.com/korniichuk/keys/",
+    url="https://github.com/korniichuk/fbi/",
     version="0.1a4",
     zip_safe=True
 )

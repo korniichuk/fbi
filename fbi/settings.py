@@ -29,14 +29,14 @@ def init():
     global messages # Strings for output
 
     # Create cfg obj
-    module_name = "keys"
+    module_name = "fbi"
     for dir_path in getsitepackages():
         module_location = join(dir_path, module_name)
         if exists(module_location) and isdir(module_location):
             break
-    keys_cfg_abs_path = join(module_location, "config/keys.cfg")
+    fbi_cfg_abs_path = join(module_location, "config/fbi.cfg")
     cfg = RawConfigParser()
-    cfg.read(keys_cfg_abs_path)
+    cfg.read(fbi_cfg_abs_path)
     # Create argparse dict
     config_argparse_rel_path = cfg.get("main", "config_argparse_rel_path")
     config_argparse_abs_path = join(module_location, config_argparse_rel_path)

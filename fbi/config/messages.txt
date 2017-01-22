@@ -1,5 +1,5 @@
-_ask_init_keys_utility
-The keys utility not inited. Init the keys utility and continue? [y/n]
+_ask_init_fbi_utility
+The fbi utility not inited. Init the fbi utility and continue? [y/n]
 _ask_passwd
 Enter password:
 _ask_remove_dir
@@ -28,8 +28,8 @@ _error_EncodeFileExistsError
 Error: Encryption failed. '%s' file already exists.
 _error_EncodeIsADirectoryError
 Error: Encryption failed. '%s' is a directory.
-_error_EncodeKeysUtilityNotInited
-Error: Encryption failed. The keys utility not inited.
+_error_EncodeFbiUtilityNotInited
+Error: Encryption failed. The fbi utility not inited.
 _error_EncodeNotADirectoryError
 Error: Encryption failed. '%s' file location is not a directory.
 _error_InitFileExistsError
@@ -43,7 +43,7 @@ Error: No '%s' file with encoded password.
 _error_NoPrivateKey
 Error: No '%s' private key.
 _inited
-Successfully inited the keys utility.
+Successfully inited the fbi utility.
 _passwd
 Password: %s
 _removed_dir

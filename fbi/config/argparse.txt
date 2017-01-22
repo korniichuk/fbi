@@ -1,5 +1,5 @@
 _parser
-The keys utility
+The fbi utility
 _subparsers
 subcommands
 _parser_decode
@@ -7,4 +7,4 @@ decode password from a file
 _parser_encode
 encode password in a file
 _parser_init
-init the keys utility
+init the fbi utility

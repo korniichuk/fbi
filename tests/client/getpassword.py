@@ -3,7 +3,7 @@
 from os.path import expanduser
 
 from fabric.api import local
-from keys import getpassword
+from fbi import getpassword
 
 def test_getpassword():
     """Test getpassword method"""
@@ -28,8 +28,8 @@ def test_getpassword():
           "_error_NoPrivateKey")
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("keys init")
-    local("keys encode %s" % abs_path) # TODO
+    local("fbi init")
+    local("fbi encode %s" % abs_path) # TODO
     local("rm -r --force ~/.ssh")
     try:
         passwd = getpassword(tilde_path)
@@ -44,7 +44,7 @@ def test_getpassword():
           "_error_DecryptionError")
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("keys init")
+    local("fbi init")
     local("mkdir --parents ~/.key")
     local("touch %s" % abs_path)
     try:
@@ -58,8 +58,8 @@ def test_getpassword():
     print("getpassword() --> cipher file --> private key:")
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("keys init")
-    local("keys encode %s" % abs_path) # TODO
+    local("fbi init")
+    local("fbi encode %s" % abs_path) # TODO
     passwd = getpassword(tilde_path)
     passwd = getpassword(abs_path)
     local("rm -r --force ~/.ssh")

@@ -126,7 +126,7 @@ def get_public_key(args):
             public_key = rsa.PublicKey.load_pkcs1(public_key_data)
         return public_key, public_key_abs_path
     else:
-        print(settings.messages["_ask_init_keys_utility"])
+        print(settings.messages["_ask_init_fbi_utility"])
         try:
             answer = raw_input()
         except NameError:
@@ -134,12 +134,12 @@ def get_public_key(args):
         answer_lower = answer.strip().lower()
         if ((answer_lower == 'y') or (answer_lower == 'yes') or
             (answer_lower == 'yep')):
-            # Init the keys utility
+            # Init the fbi utility
             init(args)
             with open(public_key_abs_path, 'r') as f:
                 public_key_data = f.read()
                 public_key = rsa.PublicKey.load_pkcs1(public_key_data)
             return public_key, public_key_abs_path
         else:
-            print(settings.messages["_error_EncodeKeysUtilityNotInited"])
+            print(settings.messages["_error_EncodeFbiUtilityNotInited"])
             exit(1)

@@ -11,35 +11,35 @@ def test_encode():
     tilde_path = "~/.key/netezza.enc"
     abs_path = expanduser(tilde_path)
 
-    # No public key --> ask init keys --> n
-    print("Encode. No public key --> ask init keys --> n:")
+    # No public key --> ask init fbi --> n
+    print("Encode. No public key --> ask init fbi --> n:")
     local("rm -r --force ~/.ssh")
     try:
-        local("echo 'n' | keys encode %s" % abs_path)
+        local("echo 'n' | fbi encode %s" % abs_path)
     except BaseException:
         pass
     try:
-        local("echo 'n' | keys encode %s" % tilde_path)
+        local("echo 'n' | fbi encode %s" % tilde_path)
     except BaseException:
         pass
     try:
-        local("cd ~; echo 'n' | keys encode %s" % rel_path)
+        local("cd ~; echo 'n' | fbi encode %s" % rel_path)
     except BaseException:
         pass
     local("rm -r --force ~/.ssh")
     local("clear")
-    # No public key --> ask init keys --> y --> no cipher location
-    print("Encode. No public key --> ask init keys --> y --> " \
+    # No public key --> ask init fbi --> y --> no cipher location
+    print("Encode. No public key --> ask init fbi --> y --> " \
           "no cipher location:")
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("echo 'y' | keys encode %s" % abs_path) # TODO
+    local("echo 'y' | fbi encode %s" % abs_path) # TODO
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("echo 'y' | keys encode %s" % tilde_path) # TODO
+    local("echo 'y' | fbi encode %s" % tilde_path) # TODO
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("cd ~; echo 'y' | keys encode %s" % rel_path) # TODO
+    local("cd ~; echo 'y' | fbi encode %s" % rel_path) # TODO
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
     local("clear")
@@ -49,19 +49,19 @@ def test_encode():
           "cipher file --> ask replace file --> n:")
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("keys init")
+    local("fbi init")
     local("mkdir --parents ~/.key")
     local("touch %s" % abs_path)
     try:
-        local("echo 'n' | keys encode %s" % abs_path)
+        local("echo 'n' | fbi encode %s" % abs_path)
     except BaseException:
         pass
     try:
-        local("echo 'n' | keys encode %s" % tilde_path)
+        local("echo 'n' | fbi encode %s" % tilde_path)
     except BaseException:
         pass
     try:
-        local("cd ~; echo 'n' | keys encode %s" % rel_path)
+        local("cd ~; echo 'n' | fbi encode %s" % rel_path)
     except BaseException:
         pass
     local("rm -r --force ~/.ssh")
@@ -73,12 +73,12 @@ def test_encode():
           "cipher file --> ask replace file --> y:")
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("keys init")
+    local("fbi init")
     local("mkdir --parents ~/.key")
     local("touch %s" % abs_path)
-    local("echo 'y' | keys encode %s" % abs_path) # TODO
-    local("echo 'y' | keys encode %s" % tilde_path) # TODO
-    local("cd ~; echo 'y' | keys encode %s" % rel_path) # TODO
+    local("echo 'y' | fbi encode %s" % abs_path) # TODO
+    local("echo 'y' | fbi encode %s" % tilde_path) # TODO
+    local("cd ~; echo 'y' | fbi encode %s" % rel_path) # TODO
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
     local("clear")

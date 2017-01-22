@@ -5,8 +5,8 @@ from fabric.api import local
 def test_version():
     """"Test the standard output for –version"""
 
-    local("keys -v")
+    local("fbi -v")
     local("clear")
-    local("keys --version")
+    local("fbi --version")
     local("clear")
     return 0

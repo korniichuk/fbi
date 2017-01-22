@@ -16,15 +16,15 @@ def test_decode():
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
     try:
-        local("keys decode %s" % abs_path)
+        local("fbi decode %s" % abs_path)
     except BaseException:
         pass
     try:
-        local("keys decode %s" % tilde_path)
+        local("fbi decode %s" % tilde_path)
     except BaseException:
         pass
     try:
-        local("cd ~; keys decode %s" % rel_path)
+        local("cd ~; fbi decode %s" % rel_path)
     except BaseException:
         pass
     local("clear")
@@ -32,11 +32,11 @@ def test_decode():
     print("Decode. Cipher file --> no private key --> _error_NoPrivateKey:")
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("keys init")
-    local("keys encode %s" % abs_path) # TODO
+    local("fbi init")
+    local("fbi encode %s" % abs_path) # TODO
     local("rm -r --force ~/.ssh")
     try:
-        local("keys decode %s" % abs_path)
+        local("fbi decode %s" % abs_path)
     except BaseException:
         pass
     local("rm -r --force ~/.key")
@@ -46,11 +46,11 @@ def test_decode():
           "_error_DecryptionError:")
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("keys init")
+    local("fbi init")
     local("mkdir --parents ~/.key")
     local("touch %s" % abs_path)
     try:
-        local("keys decode %s" % abs_path)
+        local("fbi decode %s" % abs_path)
     except BaseException:
         pass
     local("rm -r --force ~/.ssh")
@@ -60,11 +60,11 @@ def test_decode():
     print("Decode. Cipher file --> private key:")
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
-    local("keys init")
-    local("keys encode %s" % abs_path) # TODO
-    local("keys decode %s" % abs_path)
-    local("keys decode %s" % tilde_path)
-    local("cd ~; keys decode %s" % rel_path)
+    local("fbi init")
+    local("fbi encode %s" % abs_path) # TODO
+    local("fbi decode %s" % abs_path)
+    local("fbi decode %s" % tilde_path)
+    local("cd ~; fbi decode %s" % rel_path)
     local("rm -r --force ~/.ssh")
     local("rm -r --force ~/.key")
     local("clear")

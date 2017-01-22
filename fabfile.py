@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-"""The keys utility fabric file"""
+"""The fbi utility fabric file"""
 
 from fabric.api import local
 
@@ -10,7 +10,7 @@ def git():
 
     local("git remote rm origin")
     local("git remote add origin https://korniichuk@" \
-          "github.com/korniichuk/keys.git")
+          "github.com/korniichuk/fbi.git")
 
 def live():
     """Upload package to PyPI Live"""

@@ -8,24 +8,24 @@ def test_init():
     # No keys location
     print("Init. No keys location:")
     local("rm -r --force ~/.ssh")
-    local("keys init")
+    local("fbi init")
     local("rm -r --force ~/.ssh")
     local("clear")
     # Keys location dir --> private key file --> ask replace file --> y
     print("Init. Keys location dir --> private key file --> " \
           "ask replace file --> y:")
     local("rm -r --force ~/.ssh")
-    local("keys init")
-    local("echo 'y' | keys init")
+    local("fbi init")
+    local("echo 'y' | fbi init")
     local("rm -r --force ~/.ssh")
     local("clear")
     # Keys location dir --> private key file --> ask replace file --> n
     print("Init. Keys location dir --> private key file --> " \
           "ask replace file --> n:")
     local("rm -r --force ~/.ssh")
-    local("keys init")
+    local("fbi init")
     try:
-        local("echo 'n' | keys init")
+        local("echo 'n' | fbi init")
     except BaseException:
         pass
     local("rm -r --force ~/.ssh")
@@ -34,20 +34,21 @@ def test_init():
     print("Init. Keys location dir --> private key dir --> " \
           "ask remove dir --> y:")
     local("rm -r --force ~/.ssh")
-    local("keys init")
+    local("fbi init")
     local("rm -r --force ~/.ssh/private")
     local("mkdir --parents ~/.ssh/private")
-    local("echo 'y' | keys init")
+    local("echo 'y' | fbi init")
     local("rm -r --force ~/.ssh")
     local("clear")
     # Keys location dir --> private key dir --> ask remove dir --> n
-    print("Init. location dir --> private key dir --> ask remove dir --> n:")
+    print("Init. Keys location dir --> private key dir --> " \
+          "ask remove dir --> n:")
     local("rm -r --force ~/.ssh")
-    local("keys init")
+    local("fbi init")
     local("rm -r --force ~/.ssh/private")
     local("mkdir --parents ~/.ssh/private")
     try:
-        local("echo 'n' | keys init")
+        local("echo 'n' | fbi init")
     except BaseException:
         pass
     local("rm -r --force ~/.ssh")
@@ -56,7 +57,7 @@ def test_init():
     print("Init. Keys location file --> ask remove keys location --> y:")
     local("rm -r --force ~/.ssh")
     local("touch ~/.ssh")
-    local("echo 'y' | keys init")
+    local("echo 'y' | fbi init")
     local("rm -r --force ~/.ssh")
     local("clear")
     # Keys location file --> ask remove keys location --> n
@@ -64,7 +65,7 @@ def test_init():
     local("rm -r --force ~/.ssh")
     local("touch ~/.ssh")
     try:
-        local("echo 'n' | keys init")
+        local("echo 'n' | fbi init")
     except BaseException:
         pass
     local("rm -r --force ~/.ssh")

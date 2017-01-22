@@ -2,59 +2,59 @@
 
 Installation
 ============
-Install the keys utility from PyPI
-----------------------------------
+Install the fbi utility from PyPI
+---------------------------------
 ::
 
-    $ sudo pip install keys
+    $ sudo pip install fbi
 
-Install the keys utility from GitHub
-------------------------------------
+Install the fbi utility from GitHub
+-----------------------------------
 ::
 
-    $ sudo pip install git+git://github.com/korniichuk/keys#egg=keys
+    $ sudo pip install git+git://github.com/korniichuk/fbi#egg=fbi
 
-Upgrade the keys utility from PyPI
-----------------------------------
+Upgrade the fbi utility from PyPI
+---------------------------------
 ::
 
-    $ sudo pip install -U keys
+    $ sudo pip install -U fbi
 
 or::
 
-    $ sudo pip install --upgrade keys
+    $ sudo pip install --upgrade fbi
 
-Uninstall the keys utility
---------------------------
+Uninstall the fbi utility
+-------------------------
 ::
 
-    $ sudo pip uninstall keys
+    $ sudo pip uninstall fbi
 
 Development installation
 ========================
 ::
 
-    $ git clone git://github.com/korniichuk/keys.git
-    $ cd keys
+    $ git clone git://github.com/korniichuk/fbi.git
+    $ cd fbi
     $ sudo pip install .
 
 Quickstart
 ==========
-**First**, init the keys utility::
+**First**, init the fbi utility::
 
-    $ keys init
+    $ fbi init
 
 **Second**, encode password in a file::
 
-    $ keys encode PATH
+    $ fbi encode PATH
 
 Example::
 
-    $ keys encode ~/.key/netezza.enc
+    $ fbi encode ~/.key/netezza.enc
 
 **Third**, decode password from a file::
 
-    >>> from keys import getpassword
+    >>> from fbi import getpassword
     >>> path = "~/.key/netezza.enc"
     >>> passwd = getpassword(path)
 
@@ -66,45 +66,45 @@ Help
 ----
 The standard output for –help::
 
-    $ keys -h
+    $ fbi -h
 
 or::
 
-    $ keys --help
+    $ fbi --help
 
 For information on using subcommand "SUBCOMMAND", do::
 
-    $ keys SUBCOMMAND -h
+    $ fbi SUBCOMMAND -h
 
 or::
 
-    $ keys SUBCOMMAND --help
+    $ fbi SUBCOMMAND --help
 
 Example::
 
-    $ keys init -h
+    $ fbi init -h
 
 Version
 -------
 The standard output for –version::
 
-    $ keys -v
+    $ fbi -v
 
 or::
 
-    $ keys --version
+    $ fbi --version
 
-Init the keys utility
----------------------
+Init the fbi utility
+--------------------
 ::
 
-    $ keys init
+    $ fbi init
 
 Encode password in a file
 -------------------------
 ::
 
-    $ keys encode PATH
+    $ fbi encode PATH
 
 Where:
 
@@ -112,17 +112,17 @@ Where:
 
 Example::
 
-    $ keys encode /home/titan/.key/netezza.enc
+    $ fbi encode /home/titan/.key/netezza.enc
 
 or::
 
-    $ keys encode ~/.key/netezza.enc
+    $ fbi encode ~/.key/netezza.enc
 
 Decode password from a file
 ---------------------------
 ::
 
-   $ keys decode PATH
+   $ fbi decode PATH
 
 Where:
 
@@ -130,13 +130,13 @@ Where:
 
 Example::
 
-    $ keys decode /home/titan/.key/netezza.enc
+    $ fbi decode /home/titan/.key/netezza.enc
 
 or::
 
-    $ keys decode ~/.key/netezza.enc
+    $ fbi decode ~/.key/netezza.enc
 
-.. note:: Do not use ``$ keys decode PATH`` for your automation scripting.
+.. note:: Do not use ``$ fbi decode PATH`` for your automation scripting.
 
 Client library
 ==============
@@ -146,7 +146,7 @@ Get password from an encoded file
 ---------------------------------
 ::
 
-    >>> from keys import getpassword
+    >>> from fbi import getpassword
     >>> getpassword(path)
 
 Where:
@@ -155,12 +155,12 @@ Where:
 
 Example::
 
-    >>> from keys import getpassword
+    >>> from fbi import getpassword
     >>> path = "/home/titan/.key/netezza.enc"
     >>> passwd = getpassword(path)
 
 or::
 
-    >>> from keys import getpassword
+    >>> from fbi import getpassword
     >>> path = "~/.key/netezza.enc"
     >>> passwd = getpassword(path)

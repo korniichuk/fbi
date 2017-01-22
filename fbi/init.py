@@ -48,7 +48,7 @@ def create_public_key(private_key_abs_path, public_key_abs_path):
         return 0
 
 def init(args):
-    """Init the keys utility"""
+    """Init the fbi utility"""
 
     mode = settings.cfg.getint("security", "mode")
 

@@ -19,10 +19,10 @@ def parse_command_line_args():
 
     # Create top parser
     parser = ArgumentParser(
-            prog="keys", description=settings.argparse["_parser"],
+            prog="fbi", description=settings.argparse["_parser"],
             add_help=True)
     parser.add_argument("-v", "--version", action="version",
-                        version="keys 0.1a4")
+                        version="fbi 0.1a4")
     # Create subparsers for the top parser
     subparsers = parser.add_subparsers(title=settings.argparse["_subparsers"])
     # Create the parser for the "decode" subcommand
